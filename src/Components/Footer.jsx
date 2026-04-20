@@ -13,7 +13,7 @@ function Footer(){
             <div style={{ maxWidth:'1080px', margin:'0 auto'}}>
                 <img src={logo} style={{}}/>
                 <div style={{display:"flex", flexWrap:'wrap', justifyContent:'space-between'}} >
-                    <p>Test</p>
+                    <p>Helen</p>
                     <div style={{width: '300px'}}>
 
                         <p  style={{margin:0}}>Lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
