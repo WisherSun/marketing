@@ -39,8 +39,8 @@ function HeroSection(props) {
           >
             <div
               style={{
-                width: "58%",
-                marginLeft: "50px",
+                width: "35%",
+                marginLeft: "200px",
                 textAlign: "left",
               }}
             >
