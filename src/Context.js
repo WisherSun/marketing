@@ -24,6 +24,9 @@ import priceImage1 from './assets/images/price1.svg'
 import counterIcon1 from './assets/images/counter1.svg'
 
 import teamImage1 from './assets/images/team1.jpg'
+import teamImage2 from './assets/images/team2.jpg'
+import teamImage3 from './assets/images/team3.jpg'
+import teamImage4 from './assets/images/team4.jpg'
 
 import testimonialImage1 from './assets/images/testimonial1.png'
 
@@ -202,8 +205,16 @@ const CounterSectionContext = [
 
 const TeamSectionContext = [
   {
-    name: 'Poran Adinson ',
+    name: 'Faria Endaloro',
     image: teamImage1,
+    position: 'Support',
+    instaLink: '',
+    fbLink: '',
+    twitterLink: ''
+  },
+  {
+    name: 'Limon Sarkar  ',
+    image: teamImage2,
     position: 'Funder',
     instaLink: '',
     fbLink: '',
@@ -211,23 +222,15 @@ const TeamSectionContext = [
   },
   {
     name: 'Poran Adinson ',
-    image: teamImage1,
+    image: teamImage3,
     position: 'Funder',
     instaLink: '',
     fbLink: '',
     twitterLink: ''
   },
   {
-    name: 'Poran Adinson ',
-    image: teamImage1,
-    position: 'Funder',
-    instaLink: '',
-    fbLink: '',
-    twitterLink: ''
-  },
-  {
-    name: 'Poran Adinson ',
-    image: teamImage1,
+    name: 'Barian Chris ',
+    image: teamImage4,
     position: 'Funder',
     instaLink: '',
     fbLink: '',
