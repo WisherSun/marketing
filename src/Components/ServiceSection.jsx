@@ -8,7 +8,7 @@ function ServiceSection(props){
     
     
     return(
-        <div style={{width:'100%',background:'#F9F9F9', padding:'100px 0 130px'}}>
+        <div style={{width:'100%',background:'#F9F9F9', padding:'100px 0 130px', color: 'black'}}>
             <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
             <div style={{display: 'flex', margin:'50px auto', justifyContent:'space-between', gap:'15px', flexWrap:'wrap',  maxWidth:'1080px'}}>
                 {props.data.map(item =>(
