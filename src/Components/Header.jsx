@@ -1,37 +1,32 @@
-import React from "react";
+import { useState } from "react";
 
+const menu = ['Home', 'About', 'Service', 'Page', 'Blog', 'Contact']
 
 function Header(props) {
-    const menu = ['Home', 'About', 'Service', 'Page', 'Blog', 'Contact']
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-    return <div style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        backgroundColor: '#f9f9f9',
-        width: '100%',
-        zIndex: 5,
-        
+    return (
+        <header className="header">
+            <div className="container header__inner">
+                <img src={props.logo} alt="Company logo" className="header__logo" width="160" height="37" />
 
+                {/* The burger button is only visible on small screens (see App.css) */}
+                <button
+                    className="header__burger"
+                    aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                    aria-expanded={isMenuOpen}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
+                    {isMenuOpen ? '✕' : '☰'}
+                </button>
 
-    }}>
-        <div style={{display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        maxWidth:'1080px',
-        margin: '0 auto',
-        height: '80px'}}>
-            <img src={props.logo} style={{ height: '30px' }} />
-
-            <div style={{ display: 'flex', gap: '5px' }}>
-
-                {menu.map(item => (
-                    <button>{item}</button>
-
-                ))}
+                <nav className={isMenuOpen ? 'header__menu header__menu--open' : 'header__menu'}>
+                    {menu.map(item => (
+                        <button key={item} onClick={() => setIsMenuOpen(false)}>{item}</button>
+                    ))}
+                </nav>
             </div>
-        </div>
-
-    </div>
+        </header>
+    )
 }
 export default Header

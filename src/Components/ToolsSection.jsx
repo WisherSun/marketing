@@ -1,24 +1,21 @@
-import React from "react";
+import tool1 from '../assets/images/tool1.webp'
+import tool2 from '../assets/images/tool2.webp'
+import tool3 from '../assets/images/tool3.webp'
+import tool4 from '../assets/images/tool4.webp'
+import tool5 from '../assets/images/tool5.webp'
 
-import tool1 from '../assets/images/tool1.png'
-import tool2 from '../assets/images/tool2.png'
-import tool3 from '../assets/images/tool3.png'
-import tool4 from '../assets/images/tool4.png'
-import tool5 from '../assets/images/tool5.png'
+const tools = [tool1, tool2, tool3, tool4, tool5]
 
-function ToolSection(props){
-
- return <div style={{background:'#0096FF', padding:'100px 0', width:'100%'}}>
-
-    <div style={{display:'flex', justifyContent:'space-between', maxWidth:'1535px', margin:'0 auto', overflow:'hidden'}}>
-        <img src={tool1} style={{ height:'120px'}}/>
-        <img src={tool2} style={{ height:'120px'}}/>
-        <img src={tool3} style={{ height:'120px'}}/>
-        <img src={tool4} style={{ height:'120px'}}/>
-        <img src={tool5} style={{ height:'120px'}}/>
-
-    </div>
- </div>
- 
+function ToolsSection() {
+    return (
+        <section className="tools">
+            <div className="tools__list">
+                {tools.map((tool, index) => (
+                    <img key={index} src={tool} alt={`Partner logo ${index + 1}`}
+                        className="tools__logo" width="307" height="178" loading="lazy" />
+                ))}
+            </div>
+        </section>
+    )
 }
-export default ToolSection
+export default ToolsSection

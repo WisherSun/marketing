@@ -1,17 +1,7 @@
-import React from "react";
+// videoBg.jpg was an exact copy of heroBackground2, so we reuse that picture
+import bg from '../assets/images/heroBackground2.webp'
 
-import bg from '../assets/images/videoBg.jpg' 
-
-function VideoSection(){
- return <div style={{ width:'100%', 
- height:'600px',
- backgroundImage: `url(${bg})`,
- backgroundRepeat: 'no-repeat',
- backgroundAttachment:'fixed',
- backgroundPosition:'top',
- backgroundSize:'cover'
- }}>
-
- </div>
+function VideoSection() {
+    return <section className="video" style={{ backgroundImage: `url(${bg})` }}></section>
 }
 export default VideoSection

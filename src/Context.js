@@ -1,6 +1,6 @@
-import HeroBackground1 from './assets/images/HeroBackground1.jpg'
-import HeroBackground2 from './assets/images/HeroBackground2.jpg'
-import HeroBackground3 from './assets/images/HeroBackground3.jpg'
+import heroBackground1 from './assets/images/heroBackground1.webp'
+import heroBackground2 from './assets/images/heroBackground2.webp'
+import heroBackground3 from './assets/images/heroBackground3.webp'
 
 import futureIcon1 from './assets/images/futureIcon1.svg'
 import futureIcon2 from './assets/images/futureIcon2.svg'
@@ -14,40 +14,37 @@ import differentIcon1orange from './assets/images/differentIcon1orange.svg'
 import differentIcon2orange from './assets/images/differentIcon2orange.svg'
 import differentIcon3orange from './assets/images/differentIcon3orange.svg'
 
-import serviceImage1 from './assets/images/serviceImage1.jpg'
 import serviceIcon1 from './assets/images/serviceIcon1.svg'
-
-import ProjectImage1 from './assets/images/projeckBg1.jpg'
 
 import priceImage1 from './assets/images/price1.svg'
 
 import counterIcon1 from './assets/images/counter1.svg'
 
-import teamImage1 from './assets/images/team1.jpg'
-import teamImage2 from './assets/images/team2.jpg'
-import teamImage3 from './assets/images/team3.jpg'
-import teamImage4 from './assets/images/team4.jpg'
+import teamImage1 from './assets/images/team1.webp'
+import teamImage2 from './assets/images/team2.webp'
+import teamImage3 from './assets/images/team3.webp'
+import teamImage4 from './assets/images/team4.webp'
 
-import testimonialImage1 from './assets/images/testimonial1.png'
+import testimonialImage1 from './assets/images/testimonial1.webp'
 
-import newsImg1 from './assets/images/newsImg1.jpg'
+import newsImg1 from './assets/images/newsImg1.webp'
 
 
 const HeroSectionContext = [
   {
-    background: HeroBackground1,
+    background: heroBackground1,
     title1: 'Prosper in this volatile',
     title2: 'Market funding.',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur dipisicing elit, sed do eiusmod tempoi cidi ut labore et dolore magna aliqua.'
   },
   {
-    background: HeroBackground2,
+    background: heroBackground2,
     title1: 'We can your business ',
     title2: 'offer start with us.',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur dipisicing elit, sed do eiusmod tempoi cidi ut labore et dolore magna aliqua.'
   },
   {
-    background: HeroBackground3,
+    background: heroBackground3,
     title1: 'We are very different a',
     title2: 'corporate theme',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur dipisicing elit, sed do eiusmod tempoi cidi ut labore et dolore magna aliqua.'
@@ -91,37 +88,31 @@ const DifferentSectionContext = [
 const ServiceSectionContext = [
   {
     title: 'CLEAN DESIGN',
-    bgImage: serviceImage1,
     icon: serviceIcon1,
     info: 'We help businesses elevate their through custom service software development product design.'
   },
   {
     title: 'CREATIVE IDEA',
-    bgImage: serviceImage1,
     icon: serviceIcon1,
     info: 'We help businesses elevate their through custom service software development product design.'
   },
   {
     title: 'COMMUNICATION',
-    bgImage: serviceImage1,
     icon: serviceIcon1,
     info: 'We help businesses elevate their through custom service software development product design.'
   },
   {
     title: 'PHOTOGRAPHY',
-    bgImage: serviceImage1,
     icon: serviceIcon1,
     info: 'We help businesses elevate their through custom service software development product design.'
   },
   {
     title: 'ONLINE MARKETING',
-    bgImage: serviceImage1,
     icon: serviceIcon1,
     info: 'We help businesses elevate their through custom service software development product design.'
   },
   {
     title: '24/7 SUPPORT',
-    bgImage: serviceImage1,
     icon: serviceIcon1,
     info: 'We help businesses elevate their through custom service software development product design.'
   }
@@ -130,27 +121,22 @@ const ServiceSectionContext = [
 const ProjectSectionContext = [
   {
     title: 'Chan agency',
-    bgImage: ProjectImage1,
     subtitle: 'Coaching'
   },
   {
     title: 'Court Imperial',
-    bgImage: ProjectImage1,
     subtitle: 'Fachilitation'
   },
   {
     title: 'Financial Analysis',
-    bgImage: ProjectImage1,
     subtitle: 'Strategt'
   },
   {
     title: 'Business Growth',
-    bgImage: ProjectImage1,
     subtitle: 'Coaching'
   },
   {
     title: 'Finance Strategy',
-    bgImage: ProjectImage1,
     subtitle: 'Fachilitation'
   },
 
@@ -278,10 +264,6 @@ const TestimonialSectionContext = [
   }
 ]
 
-const ContactsSectionContext = [
-
-]
-
 const NewsSectionContext = [
   {
     image: newsImg1,
@@ -321,6 +303,5 @@ export default {
   TeamSectionContext,
   FAQSectionContext,
   TestimonialSectionContext,
-  ContactsSectionContext,
   NewsSectionContext
 }

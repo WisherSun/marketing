@@ -1,61 +1,43 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function HeroSection(props) {
-
   const [currentSlide, setCurrentSlide] = useState(0);
+  const slidesCount = props.data.length;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % props.data.length);
+      setCurrentSlide((prev) => (prev + 1) % slidesCount);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [props.data.length]);
+  }, [slidesCount]);
 
   return (
-    <div style={{ overflow: "hidden", paddingTop: "80px" }}>
-      
+    <section className="hero">
+      {/* width and transform depend on the state, so they stay inline */}
       <div
+        className="hero__track"
         style={{
-          display: "flex",
-          width: `${props.data.length * 100}%`,
-          transform: `translateX(-${currentSlide * (100 / props.data.length)}%)`,
-          transition: "transform 0.5s ease-in-out",
+          width: `${slidesCount * 100}%`,
+          transform: `translateX(-${currentSlide * (100 / slidesCount)}%)`,
         }}
       >
         {props.data.map((hero, index) => (
           <div
             key={index}
+            className="hero__slide"
             style={{
               backgroundImage: `url(${hero.background})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              width: `${100 / props.data.length}%`,
-              height: "90vh",
-              color: "white",
-              display: "flex",
-              alignItems: "center",
+              width: `${100 / slidesCount}%`,
             }}
           >
-            <div
-              style={{
-                width: "35%",
-                marginLeft: "200px",
-                textAlign: "left",
-              }}
-            >
-              <h1 style={{ margin: 0 }}>{hero.title1}</h1>
-              <h1 style={{ margin: 0 }}>{hero.title2}</h1>
+            <div className="hero__content">
+              <h1 className="hero__title">{hero.title1}</h1>
+              <h1 className="hero__title">{hero.title2}</h1>
 
               <p>{hero.subtitle}</p>
 
-              <div
-                style={{
-                  display: "flex",
-                  marginTop: "20px",
-                  gap: "20px",
-                }}
-              >
+              <div className="hero__buttons">
                 <button>Contact now</button>
                 <button>More service</button>
               </div>
@@ -63,8 +45,7 @@ function HeroSection(props) {
           </div>
         ))}
       </div>
-
-    </div>
+    </section>
   );
 }
 
