@@ -49,7 +49,23 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* smooth scrolling when a menu link is clicked */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* the header is fixed and 80px high - stop sections from hiding under it */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ".btn" makes a link <a> look like a button */
+button,
+.btn {
+  display: inline-block;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -61,10 +77,21 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+button:hover,
+.btn:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
+button:focus-visible,
+.btn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.btn--primary {
+  background-color: var(--blue);
+  color: white;
+  transition: background-color 0.25s;
+}
+.btn--primary:hover {
+  border-color: transparent;
+  background-color: var(--orange);
 }

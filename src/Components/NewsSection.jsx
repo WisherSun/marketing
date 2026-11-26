@@ -3,10 +3,10 @@ import time from "../assets/images/time.svg"
 
 function NewsSection(props) {
     const title = 'News & Media'
-    const subtitle = 'Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    const subtitle = 'Tips, ideas and news from the world of marketing.'
 
     return (
-        <section className="news">
+        <section className="news" id="blog">
             <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
             <div className="container news__list">
                 {props.data.map(item => (

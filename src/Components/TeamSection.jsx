@@ -9,10 +9,10 @@ function TeamSection(props) {
     const [hoveredIndex, setHoveredIndex] = useState(null)
 
     const title = 'Our Team'
-    const subtitle = 'Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    const subtitle = 'Meet the people who will work on your project.'
 
     return (
-        <section className="team">
+        <section className="team" id="team">
             <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
             <div className="container team__list">
                 {props.data.map((item, index) => {

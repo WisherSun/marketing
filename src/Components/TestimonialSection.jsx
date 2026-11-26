@@ -19,9 +19,14 @@ function getRatingText(mark) {
     return 'Mhh'
 }
 
+// "Sofia Martin" -> "SM"
+function getInitials(name) {
+    return name.split(' ').map(word => word[0]).join('').toUpperCase()
+}
+
 function TestimonialSection(props) {
     const title = 'Testimonials'
-    const subtitle = 'Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    const subtitle = 'What our clients say about working with us.'
 
     return (
         <section className="testimonial">
@@ -36,7 +41,9 @@ function TestimonialSection(props) {
 
                         <p className="testimonial__comment">{item.comment}</p>
                         <div className="testimonial__author">
-                            <img src={item.image} alt={item.name} className="testimonial__avatar" loading="lazy" />
+                            {item.image
+                                ? <img src={item.image} alt={item.name} className="testimonial__avatar" loading="lazy" />
+                                : <div className="testimonial__avatar testimonial__avatar--initials" aria-hidden="true">{getInitials(item.name)}</div>}
                             <div>
                                 <p>{item.name}</p>
                                 <p className="testimonial__position">{item.position}</p>

@@ -2,10 +2,10 @@ import SectionTitle from './blockComponents/SectionTitle'
 
 function ServiceSection(props) {
     const title = 'Our Service'
-    const subtitle = 'Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    const subtitle = 'Everything you need to promote your business online and offline.'
 
     return (
-        <section className="service">
+        <section className="service" id="services">
             <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
             <div className="container service__list">
                 {props.data.map(item => (

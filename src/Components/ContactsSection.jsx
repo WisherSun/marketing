@@ -8,7 +8,7 @@ function ContactsSection() {
     const [isSent, setIsSent] = useState(false)
 
     const title = 'Contact us'
-    const subtitle = 'Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    const subtitle = 'Have a question or a project in mind? Write to us and we will reply within one business day.'
 
     // One handler for all fields: the input's "name" says which field to update
     function handleChange(event) {
@@ -23,7 +23,7 @@ function ContactsSection() {
     }
 
     return (
-        <section className="contacts">
+        <section className="contacts" id="contact">
             <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
             <div className="container contacts__inner">
                 <div className="contacts__form-box">

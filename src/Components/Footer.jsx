@@ -12,16 +12,22 @@ const socials = [
     { name: 'Twitter', link: 'https://www.twitter.com/', icon: twitter },
 ]
 
+const quickLinks = [
+    { name: 'About us', link: '#about' },
+    { name: 'Services', link: '#services' },
+    { name: 'Pricing', link: '#pricing' },
+    { name: 'FAQ', link: '#faq' },
+    { name: 'Blog', link: '#blog' },
+]
+
 function Footer() {
     return (
         <footer className="footer">
             <div className="container">
-                <img src={logo} alt="Company logo" width="160" height="37" loading="lazy" />
                 <div className="footer__row">
-                    <p>Try to make simple edits</p>
-
                     <div className="footer__about">
-                        <p>Lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <img src={logo} alt="Fulkuri logo" width="160" height="37" loading="lazy" />
+                        <p className="footer__text">Fulkuri is a marketing agency that helps small and medium businesses find new customers and grow.</p>
                         <div className="footer__socials">
                             {socials.map(social => (
                                 <a key={social.name} href={social.link} className="footer__social"
@@ -32,9 +38,17 @@ function Footer() {
                         </div>
                     </div>
 
+                    <nav className="footer__links" aria-label="Quick links">
+                        <h3 className="footer__heading">Quick links</h3>
+                        {quickLinks.map(item => (
+                            <a key={item.name} href={item.link}>{item.name}</a>
+                        ))}
+                    </nav>
+
                     <div className="footer__contacts">
+                        <h3 className="footer__heading">Contacts</h3>
                         <div className="footer__contact">
-                            <img src={iconMap} alt="Address" /><p>1245 Rang Raod Sadar, E152 95RB</p>
+                            <img src={iconMap} alt="Address" /><p>1245 Rang Road Sadar, E152 95RB</p>
                         </div>
 
                         <div className="footer__contact">
@@ -46,6 +60,8 @@ function Footer() {
                         </div>
                     </div>
                 </div>
+
+                <p className="footer__copyright">© {new Date().getFullYear()} Fulkuri. All rights reserved.</p>
             </div>
         </footer>
     )

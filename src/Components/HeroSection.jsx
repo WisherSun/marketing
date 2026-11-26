@@ -13,7 +13,7 @@ function HeroSection(props) {
   }, [slidesCount]);
 
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       {/* width and transform depend on the state, so they stay inline */}
       <div
         className="hero__track"
@@ -38,8 +38,8 @@ function HeroSection(props) {
               <p>{hero.subtitle}</p>
 
               <div className="hero__buttons">
-                <button>Contact now</button>
-                <button>More service</button>
+                <a href="#contact" className="btn btn--primary">Contact now</a>
+                <a href="#services" className="btn">Our services</a>
               </div>
             </div>
           </div>

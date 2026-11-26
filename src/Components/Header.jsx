@@ -1,6 +1,15 @@
 import { useState } from "react";
 
-const menu = ['Home', 'About', 'Service', 'Page', 'Blog', 'Contact']
+// "link" is the id of the section on the page (for example <section id="about">)
+const menu = [
+    { name: 'Home', link: '#home' },
+    { name: 'About', link: '#about' },
+    { name: 'Services', link: '#services' },
+    { name: 'Projects', link: '#projects' },
+    { name: 'Pricing', link: '#pricing' },
+    { name: 'Blog', link: '#blog' },
+    { name: 'Contact', link: '#contact' },
+]
 
 function Header(props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -8,7 +17,9 @@ function Header(props) {
     return (
         <header className="header">
             <div className="container header__inner">
-                <img src={props.logo} alt="Company logo" className="header__logo" width="160" height="37" />
+                <a href="#home" aria-label="Fulkuri - go to top">
+                    <img src={props.logo} alt="Fulkuri logo" className="header__logo" width="160" height="37" />
+                </a>
 
                 {/* The burger button is only visible on small screens (see App.css) */}
                 <button
@@ -22,7 +33,9 @@ function Header(props) {
 
                 <nav className={isMenuOpen ? 'header__menu header__menu--open' : 'header__menu'}>
                     {menu.map(item => (
-                        <button key={item} onClick={() => setIsMenuOpen(false)}>{item}</button>
+                        <a key={item.name} href={item.link} className="btn" onClick={() => setIsMenuOpen(false)}>
+                            {item.name}
+                        </a>
                     ))}
                 </nav>
             </div>

@@ -5,7 +5,7 @@ function DifferentSection(props) {
     const [hoveredIndex, setHoveredIndex] = useState(null)
 
     return (
-        <section className="container different">
+        <section className="container different" id="about">
             <div className="different__text">
                 <h2 className="different__title">Why We Are Different?</h2>
                 {props.data.map((item, index) => (
@@ -22,7 +22,7 @@ function DifferentSection(props) {
                     </div>
                 ))}
 
-                <button className="different__button">About more</button>
+                <a href="#team" className="btn different__button">Meet our team</a>
             </div>
 
             <div className="different__image" role="img" aria-label="Our team at work"

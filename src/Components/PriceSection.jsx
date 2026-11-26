@@ -2,10 +2,10 @@ import SectionTitle from "./blockComponents/SectionTitle";
 
 function PriceSection(props) {
     const title = 'Our Price'
-    const subtitle = 'Rorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    const subtitle = 'Simple plans with no hidden fees. Choose the one that fits your business.'
 
     return (
-        <section className="price">
+        <section className="price" id="pricing">
             <SectionTitle title={title} subtitle={subtitle}></SectionTitle>
             <div className="container price__list">
                 {props.data.map(item => (
@@ -14,11 +14,12 @@ function PriceSection(props) {
                         <h3>{item.title}</h3>
                         <div className="price__circle">
                             <p>{item.price}</p>
-                            <p>{item.time}</p>
+                            <p className="price__time">{item.time}</p>
                         </div>
                         {item.info.map(feature => (
                             <p key={feature}>{feature}</p>
                         ))}
+                        <a href="#contact" className="btn btn--primary price__button">Choose plan</a>
                     </div>
                 ))}
             </div>
